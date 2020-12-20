@@ -560,7 +560,6 @@ class FangCoreTerminalClient:
 
 	def _placeholder_method(self, *args): # Placeholder method for undefined methods
 		pass
-import time
 
 class HTTPServer: # A Class for creating basic robust HTTP response servers
 	def __init__(self):
@@ -576,7 +575,7 @@ class HTTPServer: # A Class for creating basic robust HTTP response servers
 	def set_response_method(self, method): # Set the response method that will be called every time a client connects and sends a request
 		self.response_method = method
 
-	def start_http_server(self, IP, port, service_threads=5, listen=10): # Starts the HTTP Server
+	def start_http_server(self, IP, port, service_threads=1, listen=10): # Starts the HTTP Server
 		self.http_ip = str(IP)
 		self.http_port = int(port)
 		self.http_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -584,11 +583,12 @@ class HTTPServer: # A Class for creating basic robust HTTP response servers
 		self.http_sock.listen(int(listen))
 
 		self.http_running = True
+		self.current_id = 0
 
 		thread = threading.Thread(target=self._http_connection_handler)
 		thread.start()
-		for _ in range(int(service_threads)):
-			thread = threading.Thread(target=self._http_connection_servicer)
+		for iden in range(int(service_threads)):
+			thread = threading.Thread(target=self._http_connection_servicer, args=(iden, service_threads-1))
 			thread.start()
 
 		
@@ -602,16 +602,33 @@ class HTTPServer: # A Class for creating basic robust HTTP response servers
 			self.awaiting_connections.append([client, address])
 			
 
-	def _http_connection_servicer(self): # Background thread that services connections
+	def _http_connection_servicer(self, iden, max_id): # Background thread that services connections
 		while self.http_running:
-			while len(self.awaiting_connections) < 1:
-				pass
-			current = self.awaiting_connections[0]
-			del self.awaiting_connections[0]
-			client_obj = _HTTP_client(current[1], current[0], "HTTP")
-			self.response_method(client_obj)
-			current[0].sendall(client_obj._render_page())
-			current[0].close()
+			send = True
+			while (len(self.awaiting_connections) == 0) or (self.current_id != iden):
+				if not(self.http_running):
+					return
+			
+			print(self.awaiting_connections, self.current_id, iden)
+			
+			try:
+				current = self.awaiting_connections[0]
+				del self.awaiting_connections[0]
+			except Exception:
+				send = False
+
+			if self.current_id == max_id:
+				self.current_id = -1
+			self.current_id += 1
+
+			if send:
+				try:
+					client_obj = _HTTP_client(current[1], current[0], "HTTP")
+					self.response_method(client_obj)
+					current[0].sendall(client_obj._render_page())
+					current[0].close()
+				except Exception:
+					pass
 
 class _HTTP_client: # The Client object that is sent to the response method that takes care of what is responded
 	def __init__(self, address, client_object, http_or_https): # Initialize the object
