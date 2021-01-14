@@ -595,6 +595,7 @@ class HTTPServer: # A Class for creating basic robust HTTP response servers
 		self.http_ip = str(IP)
 		self.http_port = int(port) 
 		self.http_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+		self.http_sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 		self.http_sock.bind((self.http_ip, self.http_port))
 		self.http_sock.listen(int(listen))
 
