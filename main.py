@@ -14,10 +14,6 @@ def response_handler(client_obj):
 		opened = open(client_obj.split_request[0], "rb")
 		client_obj.set_page(opened.read())
 		opened.close()
-	if client_oj.split_request[0] == "REINIT":
-		HTTP_server.stop_http_server()
-		quit()
-
 
 HTTP_server = fangcore.HTTPServer()
 
