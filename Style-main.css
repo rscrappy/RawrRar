@@ -1,16 +1,18 @@
+@font-face {
+  font-family: Montserrat;
+  src: Montserrat-Regular.tff
+}
 h1.headerOne {
     text-align: left;
     float: left;
     width: 46%;
     color: #ffffff;
-    font-family: sans-serif;
 }
 h1.headerTwo {
     text-align: right;
     float: right;
     width: 46%;
     color: #ffffff;
-    font-family: sans-serif;
 }
 table.menuMain {
     color: #eeeff0;
@@ -24,6 +26,12 @@ td.menuMain {
     border-style: solid;
     border-width: medium;
     border-color: rgb(185,187,190);
+}
+td.menuMain:hover {
+    border-color: #ffffff;
+}
+td.current:hover {
+    border-color: rgb(4,220,240);
 }
 td.current {
     width: 25%;
@@ -79,10 +87,17 @@ p.menuItems {
     font-size: 150%;
     text-align: center;
 }
+a.menuMainCurrent:hover {
+    color: #ffffff;
+}
 a.menuMain:hover {
     color: #ffffff;
 }
 a.menuMain {
+    color: rgb(222,222,222);
+    text-decoration: none;    
+}
+a.menuMainCurrent {
     color: rgb(222,222,222);
     text-decoration: none;    
 }
