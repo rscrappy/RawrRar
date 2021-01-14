@@ -2,6 +2,7 @@
 @font-face {
   font-family: Montserrat;
   src: url("Montserrat-Regular.ttf");
+  font-display: swap;
 }
 h1.headerOne {
     text-align: left;
