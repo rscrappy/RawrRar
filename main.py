@@ -10,7 +10,6 @@ def response_handler(client_obj):
 	print(client_obj.split_request)
 	if client_obj.split_request == []:
 		client_obj.set_page(pages['home'])
-		client_obj.add_tag(b"Content-Type", b"text/html")
 	else:
 		opened = open(client_obj.split_request[0], "rb")
 		client_obj.set_page(opened.read())
