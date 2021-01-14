@@ -1,18 +1,20 @@
 @font-face {
   font-family: Montserrat;
-  src: Montserrat-Regular.ttf
+  src: url("Montserrat-Regular")
 }
 h1.headerOne {
     text-align: left;
     float: left;
     width: 46%;
     color: #ffffff;
+    font-family: 'Montserrat';
 }
 h1.headerTwo {
     text-align: right;
     float: right;
     width: 46%;
     color: #ffffff;
+    font-family: 'Montserrat';
 }
 table.menuMain {
     color: #eeeff0;
@@ -20,6 +22,7 @@ table.menuMain {
     margin: auto;
     display: table;
     background-color: rgb(64,68,75);
+    font-family: 'Montserrat';
 }
 td.menuMain {
     width: 25%;
@@ -67,11 +70,13 @@ p.footerLeft {
     margin: 10px;
     color: #ffffff;
     float: left;
+    font-family: 'Montserrat';
 }
 p.footerRight {
     margin: 10px;
     color: #ffffff;
     float: right;
+    font-family: 'Montserrat';
 }
 footer {
     background-color: #000000;
