@@ -13,7 +13,6 @@ def response_handler(client_obj):
 	else:
 		if client_obj.split_request[0] == "REINIT":
 			HTTP_server.stop_http_server()
-			client_obj.set_page("<a href=\"sserve.cc\">Go Back</a>")
 			return
 		opened = open(client_obj.split_request[0], "rb")
 		client_obj.set_page(opened.read())
