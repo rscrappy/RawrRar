@@ -20,7 +20,7 @@ def response_handler(client_obj):
 
 HTTP_server = fangcore.HTTPServer()
 
-HTTP_server.start_http_server("192.168.1.18", 80, 10)
+HTTP_server.start_http_server("192.168.1.18", 80, 2)
 
 HTTP_server.set_response_method(response_handler)
 
