@@ -10,6 +10,7 @@ def response_handler(client_obj):
 
 	if client_obj.split_request == []:
 		client_obj.set_page(pages['home'])
+		client_obj.add_tag(b"Content-Type", b"text/html")
 	else:
 		if client_obj.split_request[0] == "REINIT":
 			HTTP_server.stop_http_server()
