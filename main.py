@@ -2,7 +2,7 @@ import fangcore
 
 pages = {}
 
-opened = open("Rawr-main.html", "rb")
+opened = open("HTML/Rawr-main.html", "rb")
 pages['home'] = opened.read()
 opened.close()
 HTTP_server = None
@@ -15,7 +15,7 @@ def response_handler(client_obj):
 		if client_obj.split_request[0] == "REINIT":
 			HTTP_server.stop_http_server()
 			return
-		opened = open(client_obj.split_request[0], "rb")
+		opened = open("HTML/" + client_obj.split_request[0], "rb")
 		client_obj.set_page(opened.read())
 		opened.close()
 
