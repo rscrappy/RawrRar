@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+#Allow for all files to be found, as there aren't any background files
