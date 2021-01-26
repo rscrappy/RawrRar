@@ -4,6 +4,7 @@
   src: url("Montserrat-Regular.ttf");
   font-display: swap;
 }
+/* Student Portal */
 h1.headerOne {
     text-align: left;
     float: left;
@@ -16,7 +17,7 @@ h1.headerTwo {
     text-align: right;
     float: right;
     width: 46%;
-    color: #ffffff;
+    color: rgb(4,165,228);
     font-family: 'Montserrat';
     font-weight: normal;
 }
@@ -72,14 +73,14 @@ div.mainTwo {
     width: 1%;
 }
 p.footerLeft {
-    margin: 10px;
+    margin: 20px 10px;
     color: #ffffff;
     float: left;
     font-family: 'Montserrat';
     font-weight: normal;
 }
 p.footerRight {
-    margin: 10px;
+    margin: 20px 10px;
     color: #ffffff;
     float: right;
     font-family: 'Montserrat';
@@ -112,4 +113,23 @@ a.menuMain {
 a.menuMainCurrent {
     color: rgb(222,222,222);
     text-decoration: none;    
+}
+/* Teacher Portal */
+td.tCurrent {
+    width: 25%;
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(179,11,0);
+    align-items: center;
+}
+td.tCurrent:hover {
+    border-color: rgb(235,11,0);
+}
+h1.headerTwoT {
+    text-align: right;
+    float: right;
+    width: 46%;
+    color: rgb(179,11,0);
+    font-family: 'Montserrat';
+    font-weight: normal;
 }
