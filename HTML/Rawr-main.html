@@ -4,56 +4,71 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="Style-main.css">
         <link rel="icon" type="img/co" href="Favicon.png">
-        <title>RawrRar - Student Overview</title>
+        <title>RawrRar Classroom Portal</title>
+        <!-- Specific styling for this page -->
+        <style>
+            h1.titleMain {
+                text-align: center;
+                width: 100%;
+                color: #ffffff;
+                font-family: 'Montserrat';
+                font-weight: normal;
+            }
+            p.choose {
+                margin: 10px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                font-size: 200%;
+                text-align: center;
+            }
+            img.logoSelect {
+                display: flex;
+                margin: auto;
+                width: 50%;
+                height: auto;
+            }
+            a.menuMainCS:hover {
+                color: rgb(4,220,240);
+            }
+            a.menuMainCS {
+                color: rgb(4,165,228);
+                text-decoration: none;    
+            }
+            a.menuMainCT:hover {
+                color: rgb(235,11,0);
+            }
+            a.menuMainCT {
+                color: rgb(179,11,0);
+                text-decoration: none;    
+            }
+        </style>
+        <script type="text/javascript">
+            function choiceS() {
+                var page = 'Student';
+            }
+            function choiceT() {
+                var page = 'Teacher';
+            }
+        </script>
     </head>
     <body>
         <header>
-            <img src="Logo.png" alt="RawrRar" class="logo"/>
-            <div class="mainOne">
-                <br>
-            </div>
-            <h1 class="headerOne">RawrRar Classroom Portal</h1>
-            <div class="mainTwo">
-                <br>
-            </div>
-            <h1 class="headerTwo">Student</h1>
-            <br class="main">
+            <h1 class="titleMain">RawrRar Classroom Portal</h1>
         </header>
         <table class="menuMain">
-            <tr>
-                <td class="current">
-                    <a href="Rawr-main.html" class="menuMainCurrent">
-                        <p class="menuItems">
-                        <img src="school-24px.png" title="Student Overview" class="menuIcons"/>
-                        Student Overview
-                        </p>
-                    </a>
-                </td>
-                <td class="menuMain">
-                    <a href="Rawr-grades.html" class="menuMain">
-                        <p class="menuItems">
-                        <img src="grading-24px.png" title="Student Overview" class="menuIcons"/>
-                        Grades
-                        </p>
-                    </a>
-                </td>
-                <td class="menuMain">
-                    <a href="Rawr-grhistory.html" class="menuMain">
-                        <p class="menuItems">
-                        <img src="history-24px.png" title="Grade History"/>
-                        Grade History
-                        </p>
-                    </a>
-                </td>
-                <td class="menuMain">
-                    <a href="Rawr-attendance.html" class="menuMain">
-                        <p class="menuItems">
-                        <img src="person_search-24px.png" title="Attendance"/>
-                        Attendance
-                        </p>
-                    </a>
-                </td>
-            </tr>
+            <td class="current" onclick="choiceS()">
+                <a href="Rawr-overview.html" class="menuMainCS">
+                    <img src="Logo.png" class="logoSelect"/>
+                    <p class="choose">Student Portal</p>
+                </a>
+            </td>
+            <td class="tCurrent" onclick="choiceT()">
+                <a href="Rawr-overview(teacher).html" class="menuMainCT">
+                    <img src="Logo.png" class="logoSelect"/>
+                    <p class="choose">Teacher Portal</p>
+                </a>
+            </td>
         </table>
         <footer>
             <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
