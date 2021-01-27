@@ -1,23 +1,15 @@
 /* January 2021 - RoccoLox Programs */
+/* Main styling */
 @font-face {
   font-family: Montserrat;
   src: url("Montserrat-Regular.ttf");
   font-display: swap;
 }
-/* Student Portal */
 h1.headerOne {
     text-align: left;
     float: left;
     width: 46%;
     color: #ffffff;
-    font-family: 'Montserrat';
-    font-weight: normal;
-}
-h1.headerTwo {
-    text-align: right;
-    float: right;
-    width: 46%;
-    color: rgb(4,165,228);
     font-family: 'Montserrat';
     font-weight: normal;
 }
@@ -38,16 +30,6 @@ td.menuMain {
 }
 td.menuMain:hover {
     border-color: #ffffff;
-}
-td.current:hover {
-    border-color: rgb(4,220,240);
-}
-td.current {
-    width: 25%;
-    border-style: solid;
-    border-width: medium;
-    border-color: rgb(4,165,228);
-    align-items: center;
 }
 body {
     background-color: rgb(54,57,63);
@@ -113,6 +95,25 @@ a.menuMain {
 a.menuMainCurrent {
     color: rgb(222,222,222);
     text-decoration: none;    
+}
+/* Student Portal */
+td.current {
+    width: 25%;
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(4,165,228);
+    align-items: center;
+}
+td.current:hover {
+    border-color: rgb(4,220,240);
+}
+h1.headerTwo {
+    text-align: right;
+    float: right;
+    width: 46%;
+    color: rgb(4,165,228);
+    font-family: 'Montserrat';
+    font-weight: normal;
 }
 /* Teacher Portal */
 td.tCurrent {
