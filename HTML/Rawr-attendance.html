@@ -5,11 +5,21 @@
         <link rel="stylesheet" type="text/css" href="Style-main.css">
         <link rel="icon" type="img/co" href="Favicon.png">
         <title>RawrRar - Attendance</title>
+        <script type="text/javascript">
+            function signout() {
+                var signOut = confirm('Do you want to sign out of RawrRar?');
+                if (signOut === true) {
+                    return signOut;
+                } else {
+                    event.preventDefault()
+                }
+            }            
+        </script>
     </head>
     <body>
         <header>
-            <a href="Rawr-main.html">
-                <img src="Logo.png" class="logo"/>
+            <a href="Rawr-main.html" onclick="signout()">
+                <img src="Logo.png" class="logo" title="Sign out"/>
             </a>
             <div class="mainOne">
                 <br>
