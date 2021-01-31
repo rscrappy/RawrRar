@@ -28,10 +28,8 @@ if (portal === 'Student') {
     document.getElementById('signin').setAttribute('action','Rawr-overview.html');
     document.getElementById('submitLogin').setAttribute('style','background-color: rgb(4,165,228);');
     document.getElementById('header').setAttribute('style','color: rgb(4,165,228);');
-    document.getElementById('createAccount').setAttribute('style','color: rgb(4,220,240);');
 } else {
     document.getElementById('signin').setAttribute('action','Rawr-overview(teacher).html');
     document.getElementById('submitLogin').setAttribute('style','background-color: rgb(179,11,0);');
     document.getElementById('header').setAttribute('style','color: rgb(179,11,0);');
-    document.getElementById('createAccount').setAttribute('style','color: rgb(235,11,0);');
 }
