@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- January 2021 - RoccoLox Programs -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="Style-main.css">
+        <link rel="icon" type="img/co" href="Favicon.png">
+        <title id="loginTitle"></title>
+        <!-- Specific styling for this page -->
+        <style type="text/css">
+            h1.titleMain {
+                text-align: center;
+                width: 94%;
+                font-family: 'Montserrat';
+                font-weight: normal;
+            }
+            p.login {
+                font-size: 20px;
+                display: table;
+                color: #ffffff;
+                font-family: 'Montserrat';
+                font-weight: normal;
+                margin: 40px auto 10px auto;
+            }
+            input.signin {
+                font-size: 23px;
+                width: 35%;
+                display: block;
+                margin: auto;
+                padding: 8px 0px;
+                border-radius: 10px;
+                border-style: hidden;
+                text-align: center;
+                font-family: 'Montserrat';
+                font-weight: normal;
+                color: #535353;
+            }
+            input.signin:focus {
+                color: #000000;
+            }
+            input.loginSubmit {
+                font-size: 23px;
+                width: 35%;
+                display: block;
+                margin: 40px auto;
+                padding: 8px 0px;
+                border-radius: 5px;
+                border-style: hidden;
+                text-align: center;
+                font-family: 'Montserrat';
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="Rawr-main.html">
+                <img src="Logo.png" class="logo" title="Sign out"/>
+            </a>
+            <h1 class="titleMain" id="header"></h1>
+        </header>
+        <form id="signin">
+            <p class="login">Username</p>
+            <input type="text" name="username" class="signin" placeholder="Username"/>
+            <p class="login">Password</p>
+            <input type="password" name="password" class="signin" placeholder="Password"/>
+            <input type="submit" name="Submit" value="Login" class="loginSubmit" id="submitLogin"/>
+        </form>
+        <p class="login">
+            Don't have an account? 
+            <a href="" id="createAccount">Create one...</a>
+        </p>
+        <footer>
+            <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
+            <p class="footerRight">&copy; 2020-2021</p>
+        </footer>
+        <script src="JS-main.js"></script>
+    </body>
+</html>
