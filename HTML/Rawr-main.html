@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="Style-main.css">
         <link rel="icon" type="img/co" href="Favicon.png">
+        <script src="JS-main.js"></script>
         <title>RawrRar Classroom Portal</title>
         <!-- Specific styling for this page -->
-        <style>
+        <style type="text/css">
             h1.titleMain {
                 text-align: center;
                 width: 100%;
@@ -43,14 +44,6 @@
                 text-decoration: none;    
             }
         </style>
-        <script type="text/javascript">
-            function choiceS() {
-                var page = 'Student';
-            }
-            function choiceT() {
-                var page = 'Teacher';
-            }
-        </script>
     </head>
     <body>
         <header>
@@ -58,13 +51,13 @@
         </header>
         <table class="menuMain">
             <td class="current" onclick="choiceS()">
-                <a href="Rawr-overview.html" class="menuMainCS">
+                <a href="Rawr-login.html" class="menuMainCS">
                     <img src="Logo.png" class="logoSelect"/>
                     <p class="choose">Student Portal</p>
                 </a>
             </td>
             <td class="tCurrent" onclick="choiceT()">
-                <a href="Rawr-overview(teacher).html" class="menuMainCT">
+                <a href="Rawr-login.html" class="menuMainCT">
                     <img src="Logo.png" class="logoSelect"/>
                     <p class="choose">Teacher Portal</p>
                 </a>
