@@ -40,7 +40,7 @@
             input.signin:hover {
                 background-color: lightgray;
             }
-            input.loginSubmit {
+            button.loginSubmit {
                 font-size: 23px;
                 width: 35%;
                 display: block;
@@ -61,13 +61,11 @@
             </a>
             <h1 class="titleMain" id="header"></h1>
         </header>
-        <form id="signin">
-            <p class="login">Username</p>
-            <input type="text" name="username" class="signin" placeholder="Username"/>
-            <p class="login">Password</p>
-            <input type="password" name="password" class="signin" placeholder="Password"/>
-            <input type="submit" name="Submit" value="Login" class="loginSubmit" id="submitLogin"/>
-        </form>
+        <p class="login">Username</p>
+        <input type="text" name="username" class="signin" placeholder="Username"/>
+        <p class="login">Password</p>
+        <input type="password" name="password" class="signin" placeholder="Password"/>
+        <button type="submit" id="submitLogin" class="loginSubmit" onclick="submit()">Login</button>
         <footer>
             <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
             <p class="footerRight">&copy; 2020-2021</p>

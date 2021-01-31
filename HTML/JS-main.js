@@ -25,11 +25,17 @@ document.getElementById('loginTitle').innerHTML = 'RawrRar - ' + portal + ' Logi
 document.getElementById('header').innerHTML = 'RawrRar Classroom Portal ' + portal + ' Login';
 // Changes html attributes based on portal value
 if (portal === 'Student') {
-    document.getElementById('signin').setAttribute('action','Rawr-overview.html');
     document.getElementById('submitLogin').setAttribute('style','background-color: rgb(4,165,228);');
     document.getElementById('header').setAttribute('style','color: rgb(4,165,228);');
 } else {
-    document.getElementById('signin').setAttribute('action','Rawr-overview(teacher).html');
     document.getElementById('submitLogin').setAttribute('style','background-color: rgb(179,11,0);');
     document.getElementById('header').setAttribute('style','color: rgb(179,11,0);');
+}
+// Tells what page to submit to
+function submit() {
+    if (portal === 'Student') {
+        window.location.href = "Rawr-overview.html";
+    } else {
+        window.location.href = "Rawr-overview(teacher).html";
+    }
 }
