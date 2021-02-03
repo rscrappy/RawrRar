@@ -27,7 +27,7 @@ def response_handler(client_obj):
 
 HTTP_server = fangcore.HTTPServer()
 
-HTTP_server.start_http_server("192.168.1.18", 80, 2)
+HTTP_server.start_http_server("192.168.1.18", 81, 2)
 
 HTTP_server.start_https_server("192.168.1.18", 443, "certificate.crt", "privateKey.key", 2, 10, True)
 
