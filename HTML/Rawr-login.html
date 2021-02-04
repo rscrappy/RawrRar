@@ -62,14 +62,18 @@
             <h1 class="titleMain" id="header"></h1>
         </header>
         <p class="login">Username</p>
-        <input type="text" name="username" class="signin" placeholder="Username"/>
+        <input type="text" class="signin" placeholder="Username" id="username"/>
         <p class="login">Password</p>
-        <input type="password" name="password" class="signin" placeholder="Password"/>
+        <input type="password" name="password" class="signin" placeholder="Password" id="password"/>
         <button type="submit" id="submitLogin" class="loginSubmit" onclick="submit()">Login</button>
         <footer>
             <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
             <p class="footerRight">&copy; 2020-2021</p>
         </footer>
+        <script type="text/javascript">
+            // sets default number of tabs
+            localStorage.setItem('tabs',4);
+        </script>
         <script src="JS-main.js"></script>
     </body>
 </html>
