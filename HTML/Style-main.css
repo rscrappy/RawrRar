@@ -92,10 +92,6 @@ a.menuMain {
     color: rgb(222,222,222);
     text-decoration: none;    
 }
-a.menuMainCurrent {
-    color: rgb(222,222,222);
-    text-decoration: none;    
-}
 /* Student Portal */
 td.current {
     width: 25%;
