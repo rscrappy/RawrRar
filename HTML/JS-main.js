@@ -12,7 +12,8 @@ function signout() {
     // stores answer in var signOut
     var signOut = confirm('Continue to logout of RawrRar.');
     if (signOut === true) {
-        return signOut;
+        localStorage.setItem('username','');
+        localStorage.setItem('password','');
     } else {
         // stops the link from executing
         event.preventDefault();
