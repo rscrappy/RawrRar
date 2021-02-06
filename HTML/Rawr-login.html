@@ -59,15 +59,16 @@
     <body>
         <header>
             <a href="Rawr-main.html">
-                <img src="Logo.png" class="logo" title="Sign out"/>
+                <img src="Logo.png" class="logo"/>
             </a>
             <h1 class="titleMain" id="header"></h1>
         </header>
         <p class="login">Username</p>
         <input type="text" class="signin" placeholder="Username" id="username"/>
         <p class="login">Password</p>
-        <input type="password" name="password" class="signin" placeholder="Password" id="password"/>
+        <input type="password" class="signin" placeholder="Password" id="password"/>
         <button type="submit" id="submitLogin" class="loginSubmit" onclick="submit()">Login</button>
+        <p class="login" id="errorLogin" style="color: aqua;"></p>
         <footer>
             <div class="mainOne">
                 <br>
