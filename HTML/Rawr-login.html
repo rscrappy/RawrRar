@@ -1,5 +1,5 @@
 <!DOCTYPE html> <!-- January 2021 - RoccoLox Programs -->
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="Style-main.css">
@@ -33,9 +33,11 @@
                 font-family: 'Montserrat';
                 font-weight: normal;
                 color: #535353;
+                outline-style: hidden
             }
             input.signin:focus {
                 color: #000000;
+                outline-width: 0px;
             }
             input.signin:hover {
                 background-color: lightgray;
@@ -67,7 +69,14 @@
         <input type="password" name="password" class="signin" placeholder="Password" id="password"/>
         <button type="submit" id="submitLogin" class="loginSubmit" onclick="submit()">Login</button>
         <footer>
+            <div class="mainOne">
+                <br>
+            </div>
             <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
+            <p class="user" id="user"></p>
+            <div class="mainTwo">
+                <br>
+            </div>
             <p class="footerRight">&copy; 2020-2021</p>
         </footer>
         <script type="text/javascript">
