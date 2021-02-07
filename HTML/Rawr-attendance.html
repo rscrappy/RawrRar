@@ -4,6 +4,7 @@
         <script type="text/javascript">
             // tells if a user is logged in
             if (localStorage.getItem('username').length == 0) {
+                localStorage.setItem('portal','Student');
                 window.location.href = 'Rawr-login.html';
             }
         </script>
