@@ -46,6 +46,11 @@ function submit() {
             window.location.href = "Rawr-overview(teacher).html";
         }
     } else {
+        // if an invalid username or password is entered
         document.getElementById('errorLogin').innerHTML = 'Invalid username or password';
     }
+}
+// clears 'Invalid username or password' if it's being displayed
+function blank() {
+    document.getElementById('errorLogin').innerHTML = '';
 }
