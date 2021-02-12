@@ -5,6 +5,19 @@
   src: url("Montserrat-Regular.ttf");
   font-display: swap;
 }
+/* scrollbar design */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(64,68,75);
+}
+::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(179,179,179);
+}
 h1.headerOne {
     text-align: left;
     float: left;
@@ -83,7 +96,7 @@ p.user {
 }
 footer {
     background-color: #000000;
-    bottom: 0;
+    bottom: 0px;
     position: fixed;
     width: 100%;
 }
