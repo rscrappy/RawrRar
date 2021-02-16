@@ -759,7 +759,7 @@ class _HTTP_client: # The Client object that is sent to the response method that
 		if " HTTP/1.1" in read.decode():
 			self.http_version = "HTTP/1.1"
 
-		self.request_type = self.request.split(" ")[0]
+		self.request_type = self.request.split(" ")[0] #Section needs updating, doesn't support types other than GET. Needs support for Client requests
 		self.split_request = read.decode().split("\r\n")[0].replace("GET ", "").replace(" HTTP/1.1", "").replace(" HTTP/2.0", "")
 
 		if "?" in self.split_request:
@@ -771,7 +771,7 @@ class _HTTP_client: # The Client object that is sent to the response method that
 
 
 		self.split_request = [i for i in self.split_request if i != ""]
-		if len(read.decode().split("\r\n\r\n")) > 1:
+		if len(read.decode().split("\r\n\r\n")) > 1: #Needs support for just \n\n
 			self.request_content = read.decode().split("\r\n\r\n")[1]
 		else:
 			self.request_content = None
