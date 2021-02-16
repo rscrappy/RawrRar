@@ -1,6 +1,13 @@
 <!DOCTYPE html> <!-- January 2021 - RoccoLox Programs -->
-<html>
+<html lang="en">
     <head>
+        <script type="text/javascript">
+            // tells if a user is logged in
+            if (localStorage.getItem('username').length == 0) {
+                localStorage.setItem('portal','Teacher');
+                window.location.href = 'Rawr-login.html';
+            }
+        </script>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="Style-main.css">
         <link rel="icon" type="img/co" href="Favicon.png">
@@ -9,7 +16,7 @@
     <body>
         <header>
             <a href="Rawr-main.html" onclick="signout()">
-                <img src="Logo.png" class="logo" title="Sign out"/>
+                <img src="Logo.png" class="logo" title="Logout"/>
             </a>
             <div class="mainOne">
                 <br>
@@ -58,9 +65,20 @@
             </tr>
         </table>
         <footer>
+            <div class="mainOne">
+                <br>
+            </div>
             <p class="footerLeft">A Furrure and RoccoLox Programs creation.</p>
+            <p class="user" id="user"></p>
+            <div class="mainTwo">
+                <br>
+            </div>
             <p class="footerRight">&copy; 2020-2021</p>
         </footer>
+        <script type="text/javascript">
+            // displays username in footer
+            document.getElementById('user').innerHTML = localStorage.getItem('username');
+        </script>
         <script src="JS-main.js"></script>
         <script src="Plug-Ins.js"></script>
     </body>
