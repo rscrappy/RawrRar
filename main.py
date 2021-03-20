@@ -22,6 +22,8 @@ def response_handler(client_obj):
 			return
 		try:
 			client_obj.set_page(pages[client_obj.split_request[0]])
+			client_obj.add_tag(b"Access-Control-Allow-Origin", b"*")
+			print(client_obj.get_final_response())
 		except KeyError:
 			client_obj.set_response_header(b"404 Page Not Found")
 
